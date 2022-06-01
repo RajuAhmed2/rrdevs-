@@ -1,0 +1,14 @@
+.btns{
+    a{
+        text-decoration: none;
+        color:$white;
+        font-family: $head-font;
+        font-size: 16px;
+        font-weight: 400;
+        transition: $tr;
+        &:hover{
+            color: $primary !important;
+        }
+    }
+
+}
