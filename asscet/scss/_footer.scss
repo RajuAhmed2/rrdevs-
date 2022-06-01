@@ -24,9 +24,26 @@ footer{
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                margin: 10px;
+                margin: 5px;
                 height: 50px;
                 width: 50px;
+                background-color: $white;
+                border-radius:50%;
+                transition: $tr;
+                a{
+                    i{
+                        color:$primary;
+                        font-size: 20px;
+                        padding:12px;
+                        transition: $tr;
+                        &:hover{
+                            color: $white;
+                        }
+                    }
+                }
+                &:hover{
+                    background-color: $hover-bg;
+                }
             }
         }
         .footer-menu,.footer-devlop,.footer-right{

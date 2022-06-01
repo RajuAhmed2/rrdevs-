@@ -349,9 +349,26 @@ footer .footer-wepper .sosal-icon .facebook, footer .footer-wepper .sosal-icon .
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin: 10px;
+  margin: 5px;
   height: 50px;
   width: 50px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+footer .footer-wepper .sosal-icon .facebook a i, footer .footer-wepper .sosal-icon .twitter a i, footer .footer-wepper .sosal-icon .linkendin a i, footer .footer-wepper .sosal-icon .youtube a i {
+  color: #5B01AE;
+  font-size: 20px;
+  padding: 12px;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+footer .footer-wepper .sosal-icon .facebook a i:hover, footer .footer-wepper .sosal-icon .twitter a i:hover, footer .footer-wepper .sosal-icon .linkendin a i:hover, footer .footer-wepper .sosal-icon .youtube a i:hover {
+  color: #ffffff;
+}
+footer .footer-wepper .sosal-icon .facebook:hover, footer .footer-wepper .sosal-icon .twitter:hover, footer .footer-wepper .sosal-icon .linkendin:hover, footer .footer-wepper .sosal-icon .youtube:hover {
+  background-color: #A879D4;
 }
 footer .footer-wepper .footer-menu h3, footer .footer-wepper .footer-devlop h3, footer .footer-wepper .footer-right h3 {
   font-size: 22px;
