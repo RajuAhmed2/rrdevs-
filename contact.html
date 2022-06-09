@@ -20,6 +20,9 @@
     <!-- slick -->
     <link rel="stylesheet" href="./asscet/css/slick.css">
     <link rel="stylesheet" href="./asscet/css/slick-theme.css">
+        
+    <!-- aos -->
+    <link rel="stylesheet" href="./asscet/css/aos.css">
 
     <!-- fontwosam -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
@@ -29,6 +32,18 @@
 
 </head>
 <body>
+    <!-- preloder -->
+    <div id="preloader">
+        <div id="ctn-preloader" class="ctn-preloader">
+            <div class="animation-preloader">
+                <div class="spinner">
+                    <img src="./asscet/image/home/icon/fav-icon.svg" alt="">
+                </div>
+            </div>	
+            <div class="loader-section section-left"></div>
+            <div class="loader-section section-right"></div>
+        </div>
+    </div>
     <!-- header -->
     <header>
         <div class="header-wapper">
@@ -106,12 +121,12 @@
     <section>
         <div class="contact-wepper">
             <div class="container">
-                <div class="text-center text-header">
+                <div class="text-center text-header" data-aos="zoom-in" data-aos-duration="1000">
                     <h3>Services We Provide</h3>
                     <h1>Our Best Services</h1>
                 </div>
                 <div class="row align-items-center justify-content-end">
-                    <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xxl-6 p-5 from-bg">
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xxl-6 p-5 from-bg" data-aos="zoom-in-right" data-aos-duration="2000">
                         <form action="#">
                             <input type="text"  id="#" placeholder="First Name">
                             <input type="text"  id="#" placeholder="Last Name">
@@ -120,7 +135,7 @@
                             <input type="button" value="Send Message">
                         </form>
                     </div>
-                    <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xxl-6">
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xxl-6" data-aos="zoom-in-left" data-aos-duration="2000">
                         <img src="./asscet/image/home/66.png" alt="image">
                     </div>
                 </div>
@@ -137,14 +152,24 @@
                     <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xxl-4">
                         <div class="footer-laft">
                             <img src="./asscet/image/home/footer-logo.svg" alt="logo" style="max-height: 50px; margin-top:8px;">
-                            <p class="mt-4 ">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer </p>
+                            <p class="mt-4" data-aos="zoom-in" data-aos-duration="1000">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer </p>
                         </div>
-                        <div class="sosal-icon">
-                            <i class="fa-brands fa-facebook"></i>
-                            <i class="fa-brands fa-twitter"></i>
+                        <div class="sosal-icon d-flex flex-wrap align-items-center mt-4" data-aos="zoom-in" data-aos-duration="2000">
+                            <div class="facebook">
+                                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                            </div>
+                            <div class="twitter">
+                                <a href="#"> <i class="fa-brands fa-twitter"></i></a>
+                            </div>
+                            <div class="linkendin">
+                                <a href="#"> <i class="fa-brands fa-linkedin-in"></i></a>
+                            </div>
+                            <div class="youtube">
+                                <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-12 col-sm-12 col-md-2 col-lg-2 col-xxl-2">
+                    <div class="col-12 col-sm-12 col-md-2 col-lg-2 col-xxl-2" data-aos="fade-right" data-aos-duration="2000">
                         <div class="footer-menu">
                             <h3 class="mb-md-5 mt-sm-3 mb-sm-3 my-5">Quick Links</h3>
                             <ul>
@@ -155,7 +180,7 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="col-12 col-sm-12 col-md-3 col-lg-3 col-xxl-3">
+                    <div class="col-12 col-sm-12 col-md-3 col-lg-3 col-xxl-3" data-aos="fade-down" data-aos-duration="2000">
                         <div class="footer-devlop">
                             <h3  class="mb-md-5 mt-sm-3 mb-sm-3  my-5">Our Services</h3>
                             <ul>
@@ -168,7 +193,7 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="col-12 col-sm-12 col-md-3 col-lg-3 col-xxl-3">
+                    <div class="col-12 col-sm-12 col-md-3 col-lg-3 col-xxl-3" data-aos="fade-left" data-aos-duration="2000">
                         <div class="footer-right">
                             <h3  class="mb-md-5 mt-sm-3 mb-sm-3  my-5">Our Features</h3>
                             <ul>
@@ -198,8 +223,13 @@
     <script src="./asscet/js/jquery-3.6.0.min.js"></script>
     <script src="./asscet/bootrastrap/js/bootstrap.js"></script>
     <script src="./asscet/bootrastrap/js/bootstrap.min.js"></script>
+    <script src="./asscet/js/aos.js"></script>
     <script src="./asscet/js/slick.js"></script>
     <script src="./asscet/js/slick.min.js"></script>
     <script src="./asscet/js/main.js"></script>
+    <script>
+        AOS.init();
+        $('.counter').counterUp();
+    </script>
 </body>
 </html>

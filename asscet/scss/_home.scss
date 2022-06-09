@@ -5,7 +5,7 @@ section{
         overflow: hidden;
         position: relative;
         .row{
-            margin: 200px 0px;
+            margin: 100px 0px;
         }
         .banner-text{
             h3{
@@ -75,12 +75,16 @@ section{
             box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
             position: relative;
             max-width: 350px;
-            max-height:320px;
+            min-height:320px;
             margin: 15px auto;
             transition: $tr;
             .box{
-                img{
-                    padding: 20px 0;
+                .box-image{
+                    img{
+                        width: 175px;
+                        height: 163px;
+                        padding: 20px;
+                    }
                 }
                 h4{
                     padding-bottom: 20px;
@@ -89,8 +93,21 @@ section{
                     line-height: normal;
                     font-weight: 600;
                 }
-                p{
-                    
+                .about-info{
+                    a{
+                        color: $black;
+                        font-family: $head-font;
+                        transition: $tr;
+                        padding-right: 5px;
+                        &:hover{
+                           padding-right: 15px;
+                        }
+                    }
+                    span{
+                        img{
+
+                        }
+                    }
                 }
                 .num{
                     h2{
@@ -439,6 +456,11 @@ section{
             right: 13%;
             z-index: 1;
             position: absolute;
+        }
+    }
+    @media (max-width: 768px){
+        .testimonials-wreeper .slider-testimonials .testimonials {
+            padding: 100px 50px;
         }
     }
 }

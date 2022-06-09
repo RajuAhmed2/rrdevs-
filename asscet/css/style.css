@@ -1,5 +1,98 @@
 /* scss declaretion*/
+/* Preloader */
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:ital,wght@0,400;0,500;0,700;0,800;1,400;1,500;1,700;1,800;1,900&family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,400;1,500;1,700;1,900&display=swap");
+.ctn-preloader {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 999999;
+}
+
+.ctn-preloader .animation-preloader {
+  position: absolute;
+  z-index: 100;
+}
+
+.ctn-preloader .animation-preloader .spinner {
+  -webkit-animation: spinner 1s infinite linear;
+          animation: spinner 1s infinite linear;
+  height: 7em;
+  width: 7em;
+}
+
+.ctn-preloader .loader-section {
+  background-color: #ffffff;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  width: calc(50% + 1px);
+}
+
+.ctn-preloader .loader-section.section-left {
+  left: 0;
+}
+
+.ctn-preloader .loader-section.section-right {
+  right: 0;
+}
+
+.loaded .animation-preloader {
+  opacity: 0;
+  -webkit-transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
+}
+
+.loaded .loader-section.section-left {
+  -webkit-transform: translateX(-101%);
+          transform: translateX(-101%);
+  -webkit-transition: 0.7s 0.3s all cubic-bezier(0.1, 0.1, 0.1, 1);
+  transition: 0.7s 0.3s all cubic-bezier(0.1, 0.1, 0.1, 1);
+}
+
+.loaded .loader-section.section-right {
+  -webkit-transform: translateX(101%);
+          transform: translateX(101%);
+  -webkit-transition: 0.7s 0.3s all cubic-bezier(0.1, 0.1, 0.1, 1);
+  transition: 0.7s 0.3s all cubic-bezier(0.1, 0.1, 0.1, 1);
+}
+
+@-webkit-keyframes spinner {
+  to {
+    -webkit-transform: rotateY(360deg);
+            transform: rotateY(360deg);
+  }
+}
+
+@keyframes spinner {
+  to {
+    -webkit-transform: rotateY(360deg);
+            transform: rotateY(360deg);
+  }
+}
+@media screen and (max-width: 767px) {
+  .ctn-preloader .animation-preloader .spinner {
+    height: 8em;
+    width: 8em;
+  }
+}
+@media screen and (max-width: 500px) {
+  .ctn-preloader .animation-preloader .spinner {
+    height: 7em;
+    width: 7em;
+  }
+}
 * {
   margin: 0;
   padding: 0;
@@ -262,6 +355,9 @@ p {
   max-width: 1170px !important;
 }
 
+.btns {
+  position: relative;
+}
 .btns a {
   text-decoration: none;
   color: #ffffff;
@@ -276,10 +372,11 @@ p {
 }
 
 header .header-wapper {
+  position: relative;
   -webkit-transition: all 0.8s ease;
   transition: all 0.8s ease;
   background-color: #F9FAFC;
-  z-index: 999999999;
+  z-index: 90000;
   width: 100%;
   padding: 20px 0px;
   -webkit-box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
@@ -320,6 +417,82 @@ header .header-wapper.sticky {
 @media (max-width: 767px) {
   header .header-wapper.sticky {
     position: relative;
+  }
+}
+header a i {
+  font-size: 20px;
+}
+header a:hover {
+  color: #000000;
+}
+header .overly {
+  display: none;
+  position: absolute;
+  top: 0%;
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 100vw;
+  height: 100vh;
+  -webkit-transform: translateX(-100vw);
+          transform: translateX(-100vw);
+}
+header .overly .nav-wepper {
+  -webkit-animation: navbar 0.5s linear both;
+          animation: navbar 0.5s linear both;
+  position: absolute;
+  top: 0%;
+  background-color: red;
+  width: 400px;
+  height: 100vh;
+}
+header .overly .nav-wepper .nav-mob {
+  position: relative;
+}
+header .overly .nav-wepper .nav-mob a {
+  position: absolute;
+  top: 0%;
+  right: 6%;
+}
+header .overly .nav-wepper .nav-mob a i {
+  font-size: 20px;
+}
+header .overly .nav-wepper .navbar {
+  position: relative;
+}
+header .overly .nav-wepper .navbar ul {
+  width: 100%;
+}
+header .overly .nav-wepper .navbar ul li {
+  margin: 0px;
+  width: 100%;
+  padding: 15px 0px 15px 20px;
+  border-bottom: 2px solid #000;
+}
+header .overly .nav-wepper .navbar ul li a {
+  font-size: 30px;
+}
+header .active {
+  display: block !important;
+  -webkit-transform: translateX(0vw);
+          transform: translateX(0vw);
+}
+@-webkit-keyframes navbar {
+  from {
+    -webkit-transform: translateX(-100vw);
+            transform: translateX(-100vw);
+  }
+  to {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+@keyframes navbar {
+  from {
+    -webkit-transform: translateX(-100vw);
+            transform: translateX(-100vw);
+  }
+  to {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
   }
 }
 
@@ -408,7 +581,7 @@ section .banner-wepper {
   position: relative;
 }
 section .banner-wepper .row {
-  margin: 200px 0px;
+  margin: 100px 0px;
 }
 section .banner-wepper .banner-text h3 {
   font-size: 32px;
@@ -466,13 +639,15 @@ section .provied-wepper .box-wepper {
           box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   position: relative;
   max-width: 350px;
-  max-height: 320px;
+  min-height: 320px;
   margin: 15px auto;
   -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
 }
-section .provied-wepper .box-wepper .box img {
-  padding: 20px 0;
+section .provied-wepper .box-wepper .box .box-image img {
+  width: 175px;
+  height: 163px;
+  padding: 20px;
 }
 section .provied-wepper .box-wepper .box h4 {
   padding-bottom: 20px;
@@ -480,6 +655,16 @@ section .provied-wepper .box-wepper .box h4 {
   font-size: 22px;
   line-height: normal;
   font-weight: 600;
+}
+section .provied-wepper .box-wepper .box .about-info a {
+  color: #000000;
+  font-family: "Montserrat", sans-serif;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  padding-right: 5px;
+}
+section .provied-wepper .box-wepper .box .about-info a:hover {
+  padding-right: 15px;
 }
 section .provied-wepper .box-wepper .box .num h2 {
   position: absolute;
@@ -600,8 +785,8 @@ section .mind-wreeper .btns a:hover {
 }
 
 section .tools-wepper {
-  background-image: -webkit-gradient(linear, left bottom, left top, from(white), to(#fbfbfd));
-  background-image: linear-gradient(to top, white, #fbfbfd);
+  background-image: -webkit-gradient(linear, left bottom, left top, from(rgb(255, 255, 255)), to(rgb(251, 251, 253)));
+  background-image: linear-gradient(to top, rgb(255, 255, 255), rgb(251, 251, 253));
   padding: 100px 0px;
 }
 section .tools-wepper .text-header h3 {
@@ -802,6 +987,11 @@ section .testimonials-wreeper .sap-bottom {
   z-index: 1;
   position: absolute;
 }
+@media (max-width: 768px) {
+  section .testimonials-wreeper .slider-testimonials .testimonials {
+    padding: 100px 50px;
+  }
+}
 
 section .contact-wepper {
   overflow: hidden;
@@ -863,7 +1053,7 @@ section .about-wepper {
   background-size: auto;
 }
 section .about-wepper .row {
-  height: 550px;
+  height: 350px;
   width: 100%;
 }
 section .about-wepper .text-header {
@@ -926,4 +1116,175 @@ section .member-wepper .text h3 {
 }
 section .member-wepper .text p {
   color: #707070;
+}
+
+section .tab-wepper {
+  margin-top: 100px;
+}
+section .tab-wepper .btns .bt-1 a, section .tab-wepper .btns .bt-2 a {
+  height: 100%;
+  width: 100%;
+  font-size: 17px;
+  font-family: "Montserrat", sans-serif;
+  color: #ffffff;
+  background-color: #000000;
+  padding: 15px;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+section .tab-wepper .btns .bt-1 a:hover, section .tab-wepper .btns .bt-2 a:hover {
+  background-color: #A879D4;
+}
+section .tab-wepper .btns .bt-2 a {
+  background-color: red;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+section .tab-wepper .btns .bt-1 a {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+section .tab-wepper .tab ul li {
+  padding: 7px 14px;
+  margin: 0px 5px;
+  border-radius: 5px;
+  font-size: 18px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  line-height: 24px;
+  cursor: pointer;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+section .tab-wepper .tab ul li:hover {
+  color: #5B01AE;
+}
+section .tab-wepper .tab ul li:active {
+  background-color: #5B01AE;
+  color: #ffffff;
+}
+section .tab-wepper .product-wepper {
+  border-radius: 5px;
+  background-color: #F9FAFC;
+  overflow: hidden;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+          box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+section .tab-wepper .product-wepper .product-image {
+  position: relative;
+}
+section .tab-wepper .product-wepper .product-image a {
+  padding: 5px 15px;
+  font-family: "Montserrat", sans-serif;
+  opacity: 0;
+  position: absolute;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  color: #ffffff;
+  top: 45%;
+  z-index: 2;
+  border-radius: 5px;
+}
+section .tab-wepper .product-wepper .product-image a:nth-child(3) {
+  left: 15%;
+  background-color: #000000;
+}
+section .tab-wepper .product-wepper .product-image a:nth-child(2) {
+  right: 15%;
+  background-color: #000000;
+}
+section .tab-wepper .product-wepper .product-image a:hover {
+  background-color: #5B01AE;
+}
+section .tab-wepper .product-wepper .product-image:after {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  opacity: 0;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  position: absolute;
+  content: "";
+  clear: both;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.509);
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+section .tab-wepper .product-wepper .product-image:hover a {
+  opacity: 1;
+}
+section .tab-wepper .product-wepper .product-image:hover:after {
+  opacity: 1;
+}
+section .tab-wepper .product-wepper .product-image h5 {
+  font-size: 22px;
+  font-weight: 600;
+  color: #000000;
+  line-height: 34px;
+}
+section .tab-wepper .product-wepper:hover {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  background-color: #5B01AE;
+}
+section .tab-wepper .product-wepper:hover h5 {
+  color: #ffffff;
+}
+section .grid {
+  margin-bottom: 100px;
+}
+
+.page_404 {
+  padding: 40px 0;
+  background: #fff;
+  font-family: "Roboto", sans-serif;
+}
+
+.page_404 img {
+  width: 100%;
+}
+
+.four_zero_four_bg {
+  background-image: url(../image/dribbble_1.gif);
+  height: 400px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.four_zero_four_bg h1 {
+  font-size: 80px;
+}
+
+.four_zero_four_bg h3 {
+  font-size: 80px;
+}
+
+.link_404 {
+  color: #fff !important;
+  padding: 10px 20px;
+  background: #39ac31;
+  margin: 20px 0;
+  display: inline-block;
+  font-weight: bold;
+  border: 2px solid #39bc61;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+  border-radius: 4px;
+  text-transform: uppercase;
+}
+
+.link_404:hover {
+  text-decoration: none;
+  border-color: #39bc61;
+  background: transparent;
+  color: #39bc61 !important;
+}
+
+.contant_box_404 {
+  margin-top: -50px;
 }

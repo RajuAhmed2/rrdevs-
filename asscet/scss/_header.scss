@@ -1,8 +1,9 @@
 header{
     .header-wapper{
+        position: relative;
         transition : all 0.8s ease;
         background-color: $secend-bg;
-        z-index: 999999999;
+        z-index: 90000;
         width: 100%;
         padding: 20px 0px;
         box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
@@ -46,6 +47,72 @@ header{
                 position: relative;
             }
     
+        }
+    }
+    // mobile navmenu 
+    a{
+        i{
+            font-size: 20px;
+
+        }
+        &:hover{
+            color: $black;
+        }
+    }
+    .overly{
+        display: none;
+        position: absolute;
+        top: 0%;
+        background-color: rgba(0, 0, 0, 0.7);
+        width:100vw;
+        height: 100vh;
+        transform: translateX(-100vw);
+        .nav-wepper{
+            animation: navbar 0.5s linear both;
+            position: absolute;
+            top: 0%;
+            background-color: red;
+            width:400px;
+            height: 100vh;
+            .nav-mob{
+                position: relative;
+                a{
+                    position: absolute;
+                    top: 0%;
+                    right: 6%;
+                    i{
+                        font-size: 20px;
+                    }
+                }
+            }
+            .navbar{
+                position:relative;
+                ul{
+                    width: 100%;
+                    li{
+                        margin: 0px;
+                        width: 100%;
+                        padding: 15px 0px 15px 20px;
+                        border-bottom: 2px solid #000;
+                        a{
+                            font-size: 30px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .active{
+        display: block !important;
+        transform: translateX(0vw);
+    }
+    @keyframes navbar {
+        from{
+            transform: translateX(-100vw);
+        }
+        to{
+            transform: translateX(0);
+
         }
     }
 }

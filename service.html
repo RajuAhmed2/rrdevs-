@@ -16,6 +16,9 @@
     <!-- bootrastrap-->
     <link rel="stylesheet" href="./asscet/bootrastrap/css/bootstrap.css">
     <link rel="stylesheet" href="./asscet/bootrastrap/css/bootstrap.min.css">
+        
+    <!-- aos -->
+    <link rel="stylesheet" href="./asscet/css/aos.css">
 
     <!-- slick -->
     <link rel="stylesheet" href="./asscet/css/slick.css">
@@ -29,6 +32,18 @@
 
 </head>
 <body>
+    <!-- preloder -->
+    <div id="preloader">
+        <div id="ctn-preloader" class="ctn-preloader">
+            <div class="animation-preloader">
+                <div class="spinner">
+                    <img src="./asscet/image/home/icon/fav-icon.svg" alt="">
+                </div>
+            </div>	
+            <div class="loader-section section-left"></div>
+            <div class="loader-section section-right"></div>
+        </div>
+    </div>
     <!-- header -->
     <header>
         <div class="header-wapper">
@@ -102,251 +117,267 @@
         </div>
     </section>
     <!-- section-one -->
-    <!-- section-two -->
-    <section>
-        <div class="provied-wepper">
-            <div class="container">
-                <div class="text-center text-header">
-                    <h3>Services We Provide</h3>
-                    <h1>Our Best Services</h1>
-                </div>
-                <div class="row flex-wrap mt-5">
-                    <div class="box-wepper">
-                        <div class="box p-3">
-                            <div class="text-center">
-                                <img src="./asscet/image/home/icon/wp.svg" alt="icon">
-                            </div>
-                            <h4 class="text-center">WordPress Development</h4>
-                            <p  class="text-center">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
-                            <div class="num">
-                                <h2>01</h2>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="box-wepper">
-                        <div class="box p-3">
-                            <div class="text-center">
-                                <img src="./asscet/image/home/icon/wd.svg" alt="icon">
-                            </div>
-                            <h4 class="text-center">Woocommerce Development</h4>
-                            <p  class="text-center">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
-                            <div class="num">
-                                <h2>02</h2>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="box-wepper">
-                        <div class="box p-3">
-                            <div class="text-center">
-                                <img src="./asscet/image/home/icon/wp.svg" alt="icon">
-                            </div>
-                            <h4 class="text-center">WordPress Customization</h4>
-                            <p  class="text-center">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
-                            <div class="num">
-                                <h2>03</h2>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="box-wepper">
-                        <div class="box p-3">
-                            <div class="text-center">
-                                <img src="./asscet/image/home/icon/code.svg" alt="icon">
-                            </div>
-                            <h4 class="text-center">Front End Development</h4>
-                            <p  class="text-center">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
-                            <div class="num">
-                                <h2>04</h2>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="box-wepper">
-                        <div class="box p-3">
-                            <div class="text-center">
-                                <img src="./asscet/image/home/icon/wpd.svg" alt="icon">
-                            </div>
-                            <h4 class="text-center">Site Speed Optimization</h4>
-                            <p  class="text-center">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
-                            <div class="num">
-                                <h2>05</h2>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="box-wepper">
-                        <div class="box p-3">
-                            <div class="text-center">
-                                <img src="./asscet/image/home/icon/res.svg" alt="icon">
-                            </div>
-                            <h4 class="text-center">Responsive Design</h4>
-                            <p  class="text-center">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
-                            <div class="num">
-                                <h2>06</h2>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-            </div>
-        </div>
-    </section>
-    <!-- section-two -->
-    <!-- section-three -->
-    <section>
-        <div class="counter-wepper">
-            <div class="counter">
+        <!-- section-two -->
+        <section>
+            <div class="provied-wepper">
                 <div class="container">
-                    <div class="row justify-content-center align-items-center">
-                        <div class="col-12 col-sm-6 col-md-3 col-xxl-3 mb-4">
-                            <div class="count text-center">
-                                <h2>500+</h2>
+                    <div class="text-center text-header" data-aos="zoom-in" data-aos-duration="1000">
+                        <h3>Services We Provide</h3>
+                        <h1>Our Best Services</h1>
+                    </div>
+                    <div class="row flex-wrap mt-5" >
+                        <div class="box-wepper" data-aos="fade-right" data-aos-duration="1000">
+                            <div class="box p-3">
+                                <div class="text-center box-image">
+                                    <img src="./asscet/image/home/wpd.svg" alt="icon">
+                                </div>
+                                <h4 class="text-center">WordPress Development</h4>
+                                <div class="about-info text-center mb-4 d-flex align-items-center justify-content-center">
+                                    <a href="#">Learn More</a>
+                                    <span>
+                                        <img src="./asscet/image/home/Arrow_Back.svg" alt="Arrow_Back">
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box-wepper" data-aos="fade-down" data-aos-duration="1000">
+                            <div class="box p-3">
+                                <div class="text-center box-image">
+                                    <img src="./asscet/image/home/wmd.svg" alt="icon">
+                                </div>
+                                <h4 class="text-center">Woocommerce Development</h4>
+                                <div class="about-info text-center mb-4 d-flex align-items-center justify-content-center">
+                                    <a href="#">Learn More</a>
+                                    <span>
+                                        <img src="./asscet/image/home/Arrow_Back.svg" alt="Arrow_Back">
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box-wepper" data-aos="fade-left" data-aos-duration="1000">
+                            <div class="box p-3">
+                                <div class="text-center box-image">
+                                    <img src="./asscet/image/home/wpc.svg" alt="icon">
+                                </div>
+                                <h4 class="text-center">WordPress Customization</h4>
+                                <div class="about-info text-center mb-4 d-flex align-items-center justify-content-center">
+                                    <a href="#">Learn More</a>
+                                    <span>
+                                        <img src="./asscet/image/home/Arrow_Back.svg" alt="Arrow_Back">
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box-wepper" data-aos="fade-right" data-aos-duration="1000">
+                            <div class="box p-3">
+                                <div class="text-center box-image">
+                                    <img src="./asscet/image/home/frontend.svg" alt="icon">
+                                </div>
+                                <h4 class="text-center">Front End Development</h4>
+                                <div class="about-info text-center mb-4 d-flex align-items-center justify-content-center">
+                                    <a href="#">Learn More</a>
+                                    <span>
+                                        <img src="./asscet/image/home/Arrow_Back.svg" alt="Arrow_Back">
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box-wepper" data-aos="fade-up" data-aos-duration="1000">
+                            <div class="box p-3">
+                                <div class="text-center box-image">
+                                    <img src="./asscet/image/home/sso.svg" alt="icon">
+                                </div>
+                                <h4 class="text-center">Site Speed Optimization</h4>
+                                <div class="about-info text-center mb-4 d-flex align-items-center justify-content-center">
+                                    <a href="#">Learn More</a>
+                                    <span>
+                                        <img src="./asscet/image/home/Arrow_Back.svg" alt="Arrow_Back">
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box-wepper" data-aos="fade-left" data-aos-duration="1000">
+                            <div class="box p-3">
+                                <div class="text-center box-image">
+                                    <img src="./asscet/image/home/rd.svg" alt="icon">
+                                </div>
+                                <h4 class="text-center">Responsive Design</h4>
+                                <div class="about-info text-center mb-4 d-flex align-items-center justify-content-center">
+                                    <a href="#">Learn More</a>
+                                    <span>
+                                        <img src="./asscet/image/home/Arrow_Back.svg" alt="Arrow_Back">
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+        <!-- section-two -->
+        <!-- section-three -->
+        <section>
+            <div class="counter-wepper"  data-aos="fade-right" data-aos-duration="1000">
+                <div class="counters">
+                    <div class="container">
+                        <div class="row justify-content-center align-items-center" data-aos="fade-left" data-aos-duration="1000">
+                            <div class="col-12 col-sm-6 col-md-3 col-xxl-3 mb-4 text-center">
+                                <div class="d-flex justify-content-center">
+                                    <h2 class="counter">500</h2>
+                                    <h2>+</h2>
+                                </div>
                                 <h5>Project Complete</h5>
                             </div>
-                        </div>
-                        <div class="col-12 col-sm-6 col-md-3 col-xxl-3 mb-4">
-                            <div class="count text-center">
-                                <h2>490+</h2>
+                            <div class="col-12 col-sm-6 col-md-3 col-xxl-3 mb-4 text-center">
+                                <div class="d-flex justify-content-center">
+                                    <h2 class="counter">490</h2>
+                                    <h2>+</h2>
+                                </div>
                                 <h5>Satisfied Clients</h5>
                             </div>
-                        </div>
-                        <div class="col-12 col-sm-6 col-md-3 col-xxl-3 mb-4">
-                            <div class="count text-center">
-                                <h2>10+</h2>
+                            <div class="col-12 col-sm-6 col-md-3 col-xxl-3 mb-4 text-center">
+                                <div class="d-flex justify-content-center">
+                                    <h2 class="counter">10</h2>
+                                    <h2>+</h2>
+                                </div>
                                 <h5>Years Experience</h5>
                             </div>
-                        </div>
-                        <div class="col-12 col-sm-6 col-md-3 col-xxl-3 mb-4">
-                            <div class="count text-center">
-                                <h2>500+</h2>
+                            <div class="col-12 col-sm-6 col-md-3 col-xxl-3 mb-4 text-center">
+                                <div class="d-flex justify-content-center">
+                                    <h2 class="counter">500</h2>
+                                    <h2>+</h2>
+                                </div>
                                 <h5>Project Complete</h5>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="sap">
-                <img src="./asscet/image/home/icon/p-shap2.svg" alt="shap">
-            </div>
-        </div>
-    </section>
-    <!-- section-three -->
-    <!-- section-fore -->
-    <section>
-        <div class="working-wepper">
-            <div class="container">
-                <div class="text-center text-header mb-5">
-                    <h3>Services We Provide</h3>
-                    <h1>Our Best Services</h1>
-                </div>
-                <div class="row">
-                    <div class="col-12 col-md-6 col-lg-3 col-xxl-3">
-                        <div class="work text-center">
-                            <div class="icon-work d-flex justify-content-center align-items-center my-5 active">
-                                <img src="./asscet/image/home/icon/47.file.svg" alt="svg-icon">
-                            </div>
-                            <h4 class="mb-3">Requirement Gathering</h4>
-                            <p>here are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look </p>
-                            <div class="prosess d-none d-md-block">
-                                <img src="./asscet/image/home/icon/55.svg" alt="prosess">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-6 col-lg-3 col-xxl-3">
-                        <div class="work text-center">
-                            <div class="icon-work d-flex justify-content-center align-items-center my-5">
-                                <img src="./asscet/image/home/icon/13.svg" alt="svg-icon">
-                            </div>
-                            <h4 class="mb-3 text-center">Planning Setup</h4>
-                            <p>here are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look </p>
-                            <div class="prosess d-none d-lg-block">
-                                <img src="./asscet/image/home/icon/55.svg" alt="prosess">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-6 col-lg-3 col-xxl-3">
-                        <div class="work text-center ">
-                            <div class="icon-work d-flex justify-content-center align-items-center my-5">
-                                <img src="./asscet/image/home/icon/14.svg" alt="svg-icon">
-                            </div>
-                            <h4 class="mb-3">Development</h4>
-                            <p >here are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look </p>
-                            <div class="prosess d-none d-md-block">
-                                <img src="./asscet/image/home/icon/55.svg" alt="prosess">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-6 col-lg-3 col-xxl-3">
-                        <div class="work text-center">
-                            <div class="icon-work d-flex justify-content-center align-items-center my-5">
-                                <img src="./asscet/image/home/icon/12.svg" alt="svg-icon">
-                            </div>
-                            <h4 class="mb-3">Quality Check & Delivery</h4>
-                            <p>here are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look </p>
-                            <!-- <div class="prosess">
-                                <img src="./asscet/image/home/icon/55.svg" alt="prosess">
-                            </div> -->
-                        </div>
-                    </div>
+                <div class="sap">
+                    <img src="./asscet/image/home/icon/p-shap2.svg" alt="shap">
                 </div>
             </div>
-        </div>
-    </section>
-    <!-- section-fore -->
-    <!-- section-five -->
-    <section>
-        <div class="mind-wreeper">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-12 col-md-8 col-lg-8 col-xxl-8">
-                        <h4>Have A Project In Mind? Let's Get To Work </h4>
-                        <p>There are many variations of passages of Lorem Ipsum available, but the majority have  suffered </p>
+        </section>
+        <!-- section-three -->
+        <!-- section-fore -->
+        <section>
+            <div class="working-wepper">
+                <div class="container">
+                    <div class="text-center text-header mb-5" data-aos="zoom-in" data-aos-duration="1000">
+                        <h3>Services We Provide</h3>
+                        <h1>Our Best Services</h1>
                     </div>
-                    <div class="col-12 col-md-4 col-lg-4 col-xxl-4">
-                        <div class="btns">
-                            <a href="#">Start A Project</a>
+                    <div class="row">
+                        <div class="col-12 col-md-6 col-lg-3 col-xxl-3">
+                            <div class="work text-center">
+                                <div class="icon-work d-flex justify-content-center align-items-center my-5 active">
+                                    <img src="./asscet/image/home/icon/47.file.svg" alt="svg-icon">
+                                </div>
+                                <h4 class="mb-3" data-aos="fade-right">Requirement Gathering</h4>
+                                <p data-aos="zoom-in" data-aos-duration="1000" data-aos-duration="1000">here are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look </p>
+                                <div class="prosess d-none d-md-block">
+                                    <img src="./asscet/image/home/icon/55.svg" alt="prosess">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-3 col-xxl-3">
+                            <div class="work text-center">
+                                <div class="icon-work d-flex justify-content-center align-items-center my-5">
+                                    <img src="./asscet/image/home/icon/13.svg" alt="svg-icon">
+                                </div>
+                                <h4 class="mb-3 text-center" data-aos="fade-right" data-aos-duration="1000">Planning Setup</h4>
+                                <p data-aos="zoom-in" data-aos-duration="1000" >here are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look </p>
+                                <div class="prosess d-none d-lg-block">
+                                    <img src="./asscet/image/home/icon/55.svg" alt="prosess">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-3 col-xxl-3">
+                            <div class="work text-center ">
+                                <div class="icon-work d-flex justify-content-center align-items-center my-5">
+                                    <img src="./asscet/image/home/icon/14.svg" alt="svg-icon">
+                                </div>
+                                <h4 class="mb-3 text-center" data-aos="fade-right" data-aos-duration="1000">Development</h4>
+                                <p data-aos="zoom-in" data-aos-duration="1000" >here are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look </p>
+                                <div class="prosess d-none d-md-block">
+                                    <img src="./asscet/image/home/icon/55.svg" alt="prosess">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-3 col-xxl-3">
+                            <div class="work text-center">
+                                <div class="icon-work d-flex justify-content-center align-items-center my-5">
+                                    <img src="./asscet/image/home/icon/12.svg" alt="svg-icon">
+                                </div> 
+                                <h4 class="mb-3 text-center" data-aos="fade-right" data-aos-duration="1000">Quality Check & Delivery</h4>
+                                <p data-aos="zoom-in" data-aos-duration="1000" >here are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look </p>
+                                <!-- <div class="prosess">
+                                    <img src="./asscet/image/home/icon/55.svg" alt="prosess">
+                                </div> -->
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-    <!-- section-five -->
-    <!-- section-six -->
-    <section>
-        <div class="tools-wepper">
-            <div class="container">
-                <div class="text-center text-header mb-5">
-                    <h3>Services We Provide</h3>
-                    <h1>Our Best Services</h1>
-                </div>
-                <div class="row">
-                    <div class="col-12 col-sm-6 col-md-3 col-xxl-3 d-flex flex-wrap justify-content-center align-items-center border p-4">
-                        <img src="./asscet/image/home/icon/github.svg" alt="icon-tools">
-                    </div>
-                    <div class="col-12 col-sm-6 col-md-3 col-xxl-3 d-flex flex-wrap justify-content-center align-items-center border p-4">
-                        <img src="./asscet/image/home/icon/github.svg" alt="icon-tools">
-                    </div>
-                    <div class="col-12 col-sm-6 col-md-3 col-xxl-3 d-flex flex-wrap justify-content-center align-items-center border p-4">
-                        <img src="./asscet/image/home/icon/github.svg" alt="icon-tools">
-                    </div>
-                    <div class="col-12 col-sm-6 col-md-3 col-xxl-3 d-flex flex-wrap justify-content-center align-items-center border p-4">
-                        <img src="./asscet/image/home/icon/github.svg" alt="icon-tools">
-                    </div>
-                    <div class="col-12 col-sm-6 col-md-3 col-xxl-3 d-flex flex-wrap justify-content-center align-items-center border p-4">
-                        <img src="./asscet/image/home/icon/github.svg" alt="icon-tools">
-                    </div>
-                    <div class="col-12 col-sm-6 col-md-3 col-xxl-3 d-flex flex-wrap justify-content-center align-items-center border p-4">
-                        <img src="./asscet/image/home/icon/github.svg" alt="icon-tools">
-                    </div>
-                    <div class="col-12 col-sm-6 col-md-3 col-xxl-3 d-flex flex-wrap justify-content-center align-items-center border p-4">
-                        <img src="./asscet/image/home/icon/github.svg" alt="icon-tools">
-                    </div>
-                    <div class="col-12 col-sm-6 col-md-3 col-xxl-3 d-flex flex-wrap justify-content-center align-items-center border p-4">
-                        <img src="./asscet/image/home/icon/github.svg" alt="icon-tools">
+        </section>
+        <!-- section-fore -->
+        <!-- section-five -->
+        <section>
+            <div class="mind-wreeper" data-aos="fade-down" data-aos-duration="1000" >
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-12 col-md-8 col-lg-8 col-xxl-8">
+                            <h4>Have A Project In Mind? Let's Get To Work </h4>
+                            <p>There are many variations of passages of Lorem Ipsum available, but the majority have  suffered </p>
+                        </div>
+                        <div class="col-12 col-md-4 col-lg-4 col-xxl-4">
+                            <div class="btns mt-sm-5 mt-0 mt-md-0 mt-lg-0">
+                                <a href="#">Start A Project</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-    <!-- section-six -->
+        </section>
+        <!-- section-five -->
+        <!-- section-six -->
+        <section>
+            <div class="tools-wepper">
+                <div class="container">
+                    <div class="text-center text-header mb-5" data-aos="zoom-in" data-aos-duration="1000">
+                        <h3>Services We Provide</h3>
+                        <h1>Our Best Services</h1>
+                    </div>
+                    <div class="row mx-1"  data-aos="flip-left" data-aos-duration="1000">
+                        <div class="col-12 col-sm-6 col-md-3 col-xxl-3 d-flex flex-wrap justify-content-center align-items-center border p-5">
+                            <img src="./asscet/image/home/icon/github.svg" alt="icon-tools">
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-3 col-xxl-3 d-flex flex-wrap justify-content-center align-items-center border p-5">
+                            <img src="./asscet/image/home/icon/github.svg" alt="icon-tools">
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-3 col-xxl-3 d-flex flex-wrap justify-content-center align-items-center border p-5">
+                            <img src="./asscet/image/home/icon/github.svg" alt="icon-tools">
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-3 col-xxl-3 d-flex flex-wrap justify-content-center align-items-center border p-5">
+                            <img src="./asscet/image/home/icon/github.svg" alt="icon-tools">
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-3 col-xxl-3 d-flex flex-wrap justify-content-center align-items-center border p-5">
+                            <img src="./asscet/image/home/icon/github.svg" alt="icon-tools">
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-3 col-xxl-3 d-flex flex-wrap justify-content-center align-items-center border p-5">
+                            <img src="./asscet/image/home/icon/github.svg" alt="icon-tools">
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-3 col-xxl-3 d-flex flex-wrap justify-content-center align-items-center border p-5">
+                            <img src="./asscet/image/home/icon/github.svg" alt="icon-tools">
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-3 col-xxl-3 d-flex flex-wrap justify-content-center align-items-center border p-5">
+                            <img src="./asscet/image/home/icon/github.svg" alt="icon-tools">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- section-six -->
     <!-- section -->
     <!-- footer -->
     <footer>
@@ -356,14 +387,24 @@
                     <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xxl-4">
                         <div class="footer-laft">
                             <img src="./asscet/image/home/footer-logo.svg" alt="logo" style="max-height: 50px; margin-top:8px;">
-                            <p class="mt-4 ">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer </p>
+                            <p class="mt-4" data-aos="zoom-in" data-aos-duration="1000">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer </p>
                         </div>
-                        <div class="sosal-icon">
-                            <i class="fa-brands fa-facebook"></i>
-                            <i class="fa-brands fa-twitter"></i>
+                        <div class="sosal-icon d-flex flex-wrap align-items-center mt-4" data-aos="zoom-in" data-aos-duration="2000">
+                            <div class="facebook">
+                                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                            </div>
+                            <div class="twitter">
+                                <a href="#"> <i class="fa-brands fa-twitter"></i></a>
+                            </div>
+                            <div class="linkendin">
+                                <a href="#"> <i class="fa-brands fa-linkedin-in"></i></a>
+                            </div>
+                            <div class="youtube">
+                                <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-12 col-sm-12 col-md-2 col-lg-2 col-xxl-2">
+                    <div class="col-12 col-sm-12 col-md-2 col-lg-2 col-xxl-2" data-aos="fade-right" data-aos-duration="2000">
                         <div class="footer-menu">
                             <h3 class="mb-md-5 mt-sm-3 mb-sm-3 my-5">Quick Links</h3>
                             <ul>
@@ -374,7 +415,7 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="col-12 col-sm-12 col-md-3 col-lg-3 col-xxl-3">
+                    <div class="col-12 col-sm-12 col-md-3 col-lg-3 col-xxl-3" data-aos="fade-down" data-aos-duration="2000">
                         <div class="footer-devlop">
                             <h3  class="mb-md-5 mt-sm-3 mb-sm-3  my-5">Our Services</h3>
                             <ul>
@@ -387,7 +428,7 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="col-12 col-sm-12 col-md-3 col-lg-3 col-xxl-3">
+                    <div class="col-12 col-sm-12 col-md-3 col-lg-3 col-xxl-3" data-aos="fade-left" data-aos-duration="2000">
                         <div class="footer-right">
                             <h3  class="mb-md-5 mt-sm-3 mb-sm-3  my-5">Our Features</h3>
                             <ul>
@@ -415,10 +456,21 @@
     <!-- =============================
         all js link ================-->
     <script src="./asscet/js/jquery-3.6.0.min.js"></script>
+    <script src="./asscet/js/jquary-2.0.0.min.js"></script>
+    <script src="./asscet/js/waypoints.min.js"></script>
+    <script src="./asscet/js/jquery.counterup.min.js"></script>
     <script src="./asscet/bootrastrap/js/bootstrap.js"></script>
     <script src="./asscet/bootrastrap/js/bootstrap.min.js"></script>
+    <script src="./asscet/js/aos.js"></script>
     <script src="./asscet/js/slick.js"></script>
     <script src="./asscet/js/slick.min.js"></script>
     <script src="./asscet/js/main.js"></script>
+    <script>
+        AOS.init();
+        $('.counter').counterUp({
+            delay: 10,
+            time: 2000
+        });
+    </script>
 </body>
 </html>
