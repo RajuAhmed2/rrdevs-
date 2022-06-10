@@ -419,6 +419,11 @@ header .header-wapper.sticky {
     position: relative;
   }
 }
+@media (max-width: 320px) {
+  header .nav {
+    display: block !important;
+  }
+}
 header a i {
   font-size: 20px;
 }
