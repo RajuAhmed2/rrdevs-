@@ -440,7 +440,8 @@ header .overly .nav-wepper {
           animation: navbar 0.5s linear both;
   position: absolute;
   top: 0%;
-  background-color: red;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgb(125, 21, 21)), to(rgb(121, 129, 15)));
+  background: linear-gradient(rgb(125, 21, 21), rgb(121, 129, 15));
   width: 400px;
   height: 100vh;
 }
@@ -1136,7 +1137,7 @@ section .tab-wepper .btns .bt-1 a:hover, section .tab-wepper .btns .bt-2 a:hover
   background-color: #A879D4;
 }
 section .tab-wepper .btns .bt-2 a {
-  background-color: red;
+  background-color: #5B01AE;
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
 }
@@ -1159,7 +1160,7 @@ section .tab-wepper .tab ul li {
 section .tab-wepper .tab ul li:hover {
   color: #5B01AE;
 }
-section .tab-wepper .tab ul li:active {
+section .tab-wepper .tab ul .active {
   background-color: #5B01AE;
   color: #ffffff;
 }

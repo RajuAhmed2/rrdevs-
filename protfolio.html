@@ -33,7 +33,7 @@
 </head>
 <body>
     <!-- preloder -->
-    <!-- <div id="preloader">
+    <div id="preloader">
         <div id="ctn-preloader" class="ctn-preloader">
             <div class="animation-preloader">
                 <div class="spinner">
@@ -43,7 +43,7 @@
             <div class="loader-section section-left"></div>
             <div class="loader-section section-right"></div>
         </div>
-    </div> -->
+    </div>
     <!-- header -->
     <header>
         <div class="header-wapper">
@@ -76,25 +76,30 @@
                             <a href="#">Get A Quote</a>
                         </div>
                     </div>
-                    <!-- mobile navmenu -->
-                    <div class=" col-5 col-sm-3 col-md-2 d-none">
-                       <img src="./asscet/image/home/rr-devs.svg" alt="">
+                     <!-- mobile navmenu -->
+                     <div class="col-5 col-sm-3 col-md-2 text-center d-none d-block d-sm-block d-md-block d-lg-none">
+                        <a href="#" class="nav justify-content-end me-4" id="nav_bar"><i class="fa-solid fa-bars"></i></a>
                     </div>
-                    <div class="nav-mob d-none">
-                        <div class="navbar">
-                            <ul>
-                                <li><a href="index.html">home</a></li>
-                                <li><a href="about.html">about</a></li>
-                                <li><a href="service.html">service</a>
-                                    <div class="dropdwon-manu">
-                                        <ul>
-                                            <li><a href="#"></a></li>
-                                        </ul>
-                                    </div>
-                                </li>
-                                <li><a href="protfolio.html" class="active">portfolio</a></li>
-                                <li><a href="contact.html">contact</a></li>
-                            </ul>
+                    
+                    <div class="overly" id="overly">
+                        <div class="nav-wepper">
+                            <div class="nav-mob" id="nav-mob">
+                                <a href="#" class="nav mt-3"><i class="fa-solid fa-xmark"></i></a>
+                            </div>
+                            <div class="menu-nevigation-wepper">
+                                <div class="logo text-start m-5 text-center">
+                                    <img src="./asscet/image/home/rr-devs.svg" alt="logo rrdivs" style="max-height: 50px;">
+                                </div>
+                                <div class="navbar mt-5">
+                                    <ul>
+                                        <li class=""><a href="index.html">home</a></li>
+                                        <li><a href="about.html">about</a></li>
+                                        <li><a href="service.html">service</a></li>
+                                        <li><a href="protfolio.html">portfolio</a></li>
+                                        <li><a href="contact.html">contact</a></li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -132,7 +137,7 @@
                 <div class="row m-0">
                     <div class="tab text-center">
                         <ul class="d-flex justify-content-center align-items-center mb-5 filter-button-group">
-                            <li class="active-tab" data-filter=" * " >All Project</li>
+                            <li class="active" data-filter=" * " >All Project</li>
                             <li data-filter=".html_to_psd_2,.html_to_psd,.psd_wp,.psd_wp_2" > PSD To Html </li>
                             <li data-filter=".psd_wp,.wp_custom_2,.psd_wp_2" > PSD To WordPress </li>
                             <li data-filter=".html_to_psd,.wp_custom" > WordPress Customization </li>
@@ -332,6 +337,11 @@
             
             var filterValue = $(this).attr('data-filter');
             $grid.isotope({ filter: filterValue });
+            });
+
+            // filter items on button click
+            $('.filter-button-group').on( 'click', 'li', function() {
+                $(this).activeClass('active').siblings.removeClass('active');
             });
     </script>
 </body>
